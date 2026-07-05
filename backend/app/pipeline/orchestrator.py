@@ -50,7 +50,16 @@ async def run_pipeline(*, job_id: str, video_path: Path) -> dict[str, Any]:
     )
 
     ocr_results = run_ocr(key_frames)
-    events = infer_events(ocr_results)
+    ocr_per_frame = [r["ocr"] for r in ocr_results]
+    timestamps = [i / max(settings.extract_fps, 1) for i in range(len(key_frames))]
+    cursors = [_cursor(f) for f in key_frames]
+
+    events = infer_events(
+        ocr_per_frame,
+        timestamps=timestamps,
+        cursors=cursors,
+        signals=signals,
+    )
     vlm_out = await reason_over_frames(key_frames, events)
     script = await generate_script(events=events, vlm_summary=vlm_out)
     replay = await replay_and_diff(script=script, reference_frames=key_frames)
