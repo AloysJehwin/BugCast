@@ -5,11 +5,17 @@ real videos or model downloads needed for tier-1.
 """
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
 import cv2
 import numpy as np
 import pytest
+
+# Repo root on sys.path so `import ml.ocr.paddle` works from within backend/.
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
 
 
 def _write(path: Path, img: np.ndarray) -> Path:
