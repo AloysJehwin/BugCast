@@ -10,7 +10,10 @@ numpy==1.26.4
 scikit-image==0.24.0
 Pillow==10.4.0
 paddleocr==3.7.0
-paddlepaddle==3.3.1
+# paddlepaddle-gpu 3.3.0 (cu130) installed manually from bcebos:
+#   aria2c https://paddle-whl.bj.bcebos.com/stable/cu130/paddlepaddle-gpu/paddlepaddle_gpu-3.3.0-cp312-cp312-linux_x86_64.whl
+#   pip install ./paddlepaddle_gpu-3.3.0-cp312-cp312-linux_x86_64.whl
+# CPU fallback: pip install paddlepaddle==3.3.1
 imagehash==4.3.1
 ultralytics==8.3.0
 
