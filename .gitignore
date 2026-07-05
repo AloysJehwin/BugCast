@@ -1,0 +1,53 @@
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# node
+node_modules/
+.next/
+dist/
+build/
+*.tsbuildinfo
+
+# env / secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# model weights & caches (never commit)
+models/
+weights/
+*.safetensors
+*.bin
+*.gguf
+.cache/
+huggingface/
+
+# generated media
+samples/outputs/*
+!samples/outputs/.gitkeep
+frames/
+uploads/
+*.mp4
+*.mov
+*.webm
+!samples/videos/README.md
+
+# playwright
+playwright-report/
+test-results/
+
+# os
+.DS_Store
+Thumbs.db
+
+# ide
+.vscode/
+.idea/
