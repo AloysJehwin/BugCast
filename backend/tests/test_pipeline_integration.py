@@ -99,12 +99,12 @@ def synthetic_bug_video(tmp_path: Path) -> Path:
 
 @pytest.fixture
 def stub_ocr(monkeypatch: pytest.MonkeyPatch):
-    """Fake OCR: label frames by filename → keywords. Keeps paddle out of tier-2."""
-    def fake_ocr_token_set(path: Path) -> set[str]:
-        # Load frame, look at pixels — cheap heuristic.
+    """Fake OCR: return full-token dicts so both the scorer (via _tokens_to_set)
+    and downstream stages see coherent data. Keeps paddle out of tier-2."""
+    def fake_ocr_full(path: Path) -> list[dict]:
         img = cv2.imread(str(path))
         if img is None:
-            return set()
+            return []
         hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
         red_mask = (
             cv2.inRange(hsv, np.array([0, 100, 80]), np.array([10, 255, 255]))
@@ -112,27 +112,25 @@ def stub_ocr(monkeypatch: pytest.MonkeyPatch):
         )
         red_ratio = float(np.count_nonzero(red_mask)) / red_mask.size
 
-        h, w = img.shape[:2]
-        # Green button region check
         green_mask = cv2.inRange(hsv, np.array([40, 80, 60]), np.array([80, 255, 200]))
         has_button = float(np.count_nonzero(green_mask)) / green_mask.size > 0.01
 
-        tokens: set[str] = set()
+        h, w = img.shape[:2]
+
+        def _tok(text: str) -> dict:
+            return {"text": text, "bbox": [10, 10, 100, 30], "conf": 0.99}
+
         if red_ratio > 0.02:
-            tokens |= {"500", "server", "error"}
-        elif has_button:
-            tokens |= {"please", "log", "in", "email", "password", "sign", "in"}
-        else:
-            # blank-ish
-            if img.mean() > 220:
-                pass
-            else:
-                tokens |= {"please", "log", "in", "email", "password"}
-        return tokens
+            return [_tok(w) for w in ("500", "server", "error")]
+        if has_button:
+            return [_tok(w) for w in ("please", "log", "in", "email", "password", "sign", "in")]
+        if img.mean() > 220:
+            return []
+        return [_tok(w) for w in ("please", "log", "in", "email", "password")]
 
     import app.pipeline.orchestrator as orch
-    monkeypatch.setattr(orch, "_ocr_token_set", fake_ocr_token_set)
-    return fake_ocr_token_set
+    monkeypatch.setattr(orch, "_ocr_full", fake_ocr_full)
+    return fake_ocr_full
 
 
 @pytest.fixture

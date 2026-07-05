@@ -19,10 +19,10 @@ from app.pipeline.vlm import reason_over_frames
 from app.utils.config import settings
 
 
-def _ocr_token_set(path: Path) -> set[str]:
-    """Lazy import so tests don't need paddle installed."""
-    from ml.ocr.paddle import ocr_text_set
-    return ocr_text_set(path)
+def _ocr_full(path: Path) -> list[dict[str, Any]]:
+    """Full-token OCR. Runs once per Pass-2 survivor and gets cached."""
+    from ml.ocr.paddle import ocr_frame
+    return ocr_frame(path)
 
 
 async def run_pipeline(*, job_id: str, video_path: Path) -> dict[str, Any]:
@@ -40,16 +40,16 @@ async def run_pipeline(*, job_id: str, video_path: Path) -> dict[str, Any]:
         hit = tracker.locate(path)
         return (hit.x, hit.y) if hit else None
 
-    key_frames, signals = filter_and_score(
+    key_frames, signals, ocr_cache = filter_and_score(
         all_frames,
         fps=settings.extract_fps,
         out_dir=outputs_dir,
-        ocr_fn=_ocr_token_set,
+        ocr_fn=_ocr_full,
         cursor_fn=_cursor,
         max_key_frames=settings.max_key_frames,
     )
 
-    ocr_results = run_ocr(key_frames)
+    ocr_results = run_ocr(key_frames, cache=ocr_cache)
     ocr_per_frame = [r["ocr"] for r in ocr_results]
     timestamps = [i / max(settings.extract_fps, 1) for i in range(len(key_frames))]
     cursors = [_cursor(f) for f in key_frames]
