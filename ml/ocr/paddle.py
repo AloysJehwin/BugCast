@@ -2,7 +2,8 @@
 
 The v3 API returns a list of `OCRResult` objects with `.json` payloads.
 We disable orientation/unwarping/textline extras — for UI screenshots they add
-latency without helping. Mobile detection + recognition is enough.
+latency without helping. MKLDNN is disabled: on some CPUs it hits a paddle 3.3
+PIR-runtime bug on the OCR detection model.
 """
 from __future__ import annotations
 
@@ -17,15 +18,24 @@ def _get():
     if _ocr is None:
         from paddleocr import PaddleOCR
         _ocr = PaddleOCR(
-            ocr_version="PP-OCRv6",
-            text_detection_model_name="PP-OCRv6_mobile_det",
-            text_recognition_model_name="PP-OCRv6_mobile_rec",
+            lang="en",
             use_doc_orientation_classify=False,
             use_doc_unwarping=False,
             use_textline_orientation=False,
-            lang="en",
+            enable_mkldnn=False,
         )
     return _ocr
+
+
+def _payload(result: Any) -> dict[str, Any]:
+    """PaddleOCR 3.7 wraps the OCR result under either `.json` (dict) or `.json["res"]`.
+
+    We normalize so callers always see rec_texts / rec_scores / rec_polys at top level.
+    """
+    j = result.json
+    if isinstance(j, dict) and "res" in j and isinstance(j["res"], dict):
+        return j["res"]
+    return j if isinstance(j, dict) else {}
 
 
 def ocr_frame(path: Path) -> list[dict[str, Any]]:
@@ -34,7 +44,7 @@ def ocr_frame(path: Path) -> list[dict[str, Any]]:
     if not results:
         return []
 
-    payload = results[0].json  # dict per v3 API
+    payload = _payload(results[0])
     rec_texts: list[str] = payload.get("rec_texts") or []
     rec_scores: list[float] = payload.get("rec_scores") or []
     rec_polys: list[list[list[float]]] = payload.get("rec_polys") or payload.get("dt_polys") or []
