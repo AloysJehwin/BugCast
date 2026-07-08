@@ -1,0 +1,9 @@
+{
+  "title": "Dashboard memory usage grows continuously while idle",
+  "body": "## Description\nDuring a recorded session in OpsPanel, the user encountered: Dashboard memory usage grows continuously while idle.\n\n## Steps to Reproduce\n1. Observe UI state: Dashboard\n2. Observe UI state: Memory 2.8 GB\n3. Observe UI state: Memory 4.5 GB\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: Memory 4.5 GB.\n\n## Environment\n- App: OpsPanel\n- Platform: desktop\n",
+  "labels": [
+    "bug",
+    "performance"
+  ],
+  "severity": "high"
+}

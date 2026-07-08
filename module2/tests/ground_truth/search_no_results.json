@@ -1,0 +1,9 @@
+{
+  "title": "Search returns empty list despite matching documents",
+  "body": "## Description\nDuring a recorded session in DocFinder, the user encountered: Search returns empty list despite matching documents.\n\n## Steps to Reproduce\n1. Observe UI state: Search documents\n2. Observe UI state: 0 results\n3. Observe UI state: Filter: All types\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: Filter: All types.\n\n## Environment\n- App: DocFinder\n- Platform: web\n",
+  "labels": [
+    "bug",
+    "regression"
+  ],
+  "severity": "medium"
+}

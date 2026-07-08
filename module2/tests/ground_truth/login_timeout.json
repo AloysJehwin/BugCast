@@ -1,0 +1,9 @@
+{
+  "title": "Login request times out after submitting valid credentials",
+  "body": "## Description\nDuring a recorded session in ShopPortal, the user encountered: Login request times out after submitting valid credentials.\n\n## Steps to Reproduce\n1. Observe UI state: Welcome back\n2. Observe UI state: Signing in...\n3. Observe UI state: Request timed out\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: Request timed out.\n\n## Environment\n- App: ShopPortal\n- Platform: web\n",
+  "labels": [
+    "bug",
+    "ui"
+  ],
+  "severity": "high"
+}

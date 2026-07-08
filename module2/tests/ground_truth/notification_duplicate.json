@@ -1,0 +1,9 @@
+{
+  "title": "Duplicate push notifications sent for a single mention",
+  "body": "## Description\nDuring a recorded session in TeamChat, the user encountered: Duplicate push notifications sent for a single mention.\n\n## Steps to Reproduce\n1. Observe UI state: @alex can you review?\n2. Observe UI state: Mentioned you\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: Mentioned you.\n\n## Environment\n- App: TeamChat\n- Platform: web\n",
+  "labels": [
+    "bug",
+    "performance"
+  ],
+  "severity": "low"
+}

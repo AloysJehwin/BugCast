@@ -1,0 +1,9 @@
+{
+  "title": "Pickup marker appears offset from actual GPS location",
+  "body": "## Description\nDuring a recorded session in RideMap, the user encountered: Pickup marker appears offset from actual GPS location.\n\n## Steps to Reproduce\n1. Observe UI state: Set pickup\n2. Observe UI state: 123 Main St\n3. Observe UI state: You are here\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: You are here.\n\n## Environment\n- App: RideMap\n- Platform: android\n",
+  "labels": [
+    "bug",
+    "ui"
+  ],
+  "severity": "medium"
+}

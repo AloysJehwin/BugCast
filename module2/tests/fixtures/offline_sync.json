@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "session_id": "offline_sync",
+  "metadata": {
+    "app_name": "FieldNotes",
+    "platform": "ios",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Offline mode",
+        "Saved locally"
+      ],
+      "ui_elements": [
+        {
+          "type": "badge",
+          "text": "Offline"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "Back online",
+        "Syncing..."
+      ],
+      "ui_elements": [
+        {
+          "type": "text",
+          "text": "Syncing"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "Sync failed",
+        "Changes discarded"
+      ],
+      "ui_elements": [
+        {
+          "type": "dialog",
+          "text": "Sync failed"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Offline edits are lost after reconnecting to network"
+    }
+  ]
+}

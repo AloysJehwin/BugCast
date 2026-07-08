@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "session_id": "tooltip_clipped",
+  "metadata": {
+    "app_name": "DesignLab",
+    "platform": "web",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Align left",
+        "Tooltip"
+      ],
+      "ui_elements": [
+        {
+          "type": "button",
+          "text": "Align left"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "Align left"
+      ],
+      "ui_elements": [
+        {
+          "type": "tooltip",
+          "text": "Align selected objects to the left edge"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "...",
+        "clipped"
+      ],
+      "ui_elements": [
+        {
+          "type": "tooltip",
+          "text": "Align selected"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Toolbar tooltip is clipped at viewport edge on small screens"
+    }
+  ]
+}

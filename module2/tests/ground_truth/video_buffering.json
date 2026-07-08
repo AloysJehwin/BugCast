@@ -1,0 +1,9 @@
+{
+  "title": "Live stream stalls indefinitely on mobile data",
+  "body": "## Description\nDuring a recorded session in StreamBox, the user encountered: Live stream stalls indefinitely on mobile data.\n\n## Steps to Reproduce\n1. Observe UI state: Live now\n2. Observe UI state: Buffering...\n3. Observe UI state: Playback error\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: Playback error.\n\n## Environment\n- App: StreamBox\n- Platform: android\n",
+  "labels": [
+    "bug",
+    "performance"
+  ],
+  "severity": "medium"
+}

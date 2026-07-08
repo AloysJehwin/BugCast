@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "session_id": "map_marker_offset",
+  "metadata": {
+    "app_name": "RideMap",
+    "platform": "android",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Set pickup",
+        "Current location"
+      ],
+      "ui_elements": [
+        {
+          "type": "button",
+          "text": "Current location"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "123 Main St"
+      ],
+      "ui_elements": [
+        {
+          "type": "marker",
+          "text": "Pickup"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "You are here",
+        "200m away"
+      ],
+      "ui_elements": [
+        {
+          "type": "marker",
+          "text": "You are here"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Pickup marker appears offset from actual GPS location"
+    }
+  ]
+}

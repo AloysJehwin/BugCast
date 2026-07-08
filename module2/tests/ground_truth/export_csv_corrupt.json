@@ -1,0 +1,9 @@
+{
+  "title": "Exported CSV file opens with garbled characters",
+  "body": "## Description\nDuring a recorded session in DataDesk, the user encountered: Exported CSV file opens with garbled characters.\n\n## Steps to Reproduce\n1. Observe UI state: Reports\n2. Observe UI state: Export complete\n3. Observe UI state: \u00c3\u00a9\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: \u00c3\u00a9.\n\n## Environment\n- App: DataDesk\n- Platform: desktop\n",
+  "labels": [
+    "bug",
+    "regression"
+  ],
+  "severity": "high"
+}

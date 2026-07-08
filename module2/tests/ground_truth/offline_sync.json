@@ -1,0 +1,9 @@
+{
+  "title": "Offline edits are lost after reconnecting to network",
+  "body": "## Description\nDuring a recorded session in FieldNotes, the user encountered: Offline edits are lost after reconnecting to network.\n\n## Steps to Reproduce\n1. Observe UI state: Offline mode\n2. Observe UI state: Back online\n3. Observe UI state: Sync failed\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: Sync failed.\n\n## Environment\n- App: FieldNotes\n- Platform: ios\n",
+  "labels": [
+    "bug",
+    "regression"
+  ],
+  "severity": "critical"
+}

@@ -1,0 +1,68 @@
+{
+  "version": "1.0",
+  "session_id": "keyboard_trap",
+  "metadata": {
+    "app_name": "SupportDesk",
+    "platform": "web",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Help",
+        "Contact support"
+      ],
+      "ui_elements": [
+        {
+          "type": "button",
+          "text": "Contact support"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "Support chat",
+        "Message",
+        "Send"
+      ],
+      "ui_elements": [
+        {
+          "type": "modal",
+          "text": "Support chat"
+        },
+        {
+          "type": "input",
+          "text": "Message"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "Tab",
+        "Shift+Tab",
+        "focus trap"
+      ],
+      "ui_elements": [
+        {
+          "type": "modal",
+          "text": "Support chat"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Keyboard focus trapped inside modal and cannot reach close button"
+    }
+  ]
+}

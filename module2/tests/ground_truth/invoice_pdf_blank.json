@@ -1,0 +1,8 @@
+{
+  "title": "Generated invoice PDF is blank for multi-page orders",
+  "body": "## Description\nDuring a recorded session in BillingPro, the user encountered: Generated invoice PDF is blank for multi-page orders.\n\n## Steps to Reproduce\n1. Observe UI state: Order #8821\n2. Observe UI state: Generating PDF...\n3. Observe UI state: Blank page\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: Blank page.\n\n## Environment\n- App: BillingPro\n- Platform: desktop\n",
+  "labels": [
+    "bug"
+  ],
+  "severity": "high"
+}

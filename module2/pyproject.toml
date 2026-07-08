@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "module2-issue-generator"
+version = "0.1.0"
+description = "Module 2: GitHub Issue Draft Generator from Module 1 bug session JSON"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml>=6.0",
+    "pydantic>=2.0",
+    "ollama>=0.4.0",
+    "rouge-score>=0.1.2",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+lingua = [
+    "llmlingua>=0.2.2",
+    "torch>=2.0",
+    "transformers>=4.36",
+]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+]
+
+[project.scripts]
+module2 = "issue_draft_generator.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["issue_draft_generator*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
