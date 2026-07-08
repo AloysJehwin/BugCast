@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "session_id": "calendar_timezone",
+  "metadata": {
+    "app_name": "ScheduleIt",
+    "platform": "web",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Team sync",
+        "10:00 AM PST"
+      ],
+      "ui_elements": [
+        {
+          "type": "event",
+          "text": "Team sync"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "Timezone: America/Los_Angeles"
+      ],
+      "ui_elements": [
+        {
+          "type": "select",
+          "text": "Timezone"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "Team sync",
+        "11:00 AM PST"
+      ],
+      "ui_elements": [
+        {
+          "type": "event",
+          "text": "Team sync"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Meetings shift by one hour after daylight saving change"
+    }
+  ]
+}

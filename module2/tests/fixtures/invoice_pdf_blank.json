@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "session_id": "invoice_pdf_blank",
+  "metadata": {
+    "app_name": "BillingPro",
+    "platform": "desktop",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Order #8821",
+        "Download PDF"
+      ],
+      "ui_elements": [
+        {
+          "type": "button",
+          "text": "Download PDF"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "Generating PDF..."
+      ],
+      "ui_elements": [
+        {
+          "type": "text",
+          "text": "Generating PDF"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "Blank page",
+        "0 items rendered"
+      ],
+      "ui_elements": [
+        {
+          "type": "preview",
+          "text": "PDF preview"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Generated invoice PDF is blank for multi-page orders"
+    }
+  ]
+}

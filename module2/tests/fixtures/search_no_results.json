@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "session_id": "search_no_results",
+  "metadata": {
+    "app_name": "DocFinder",
+    "platform": "web",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Search documents",
+        "invoice"
+      ],
+      "ui_elements": [
+        {
+          "type": "input",
+          "text": "Search"
+        },
+        {
+          "type": "button",
+          "text": "Search"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "0 results",
+        "No documents found"
+      ],
+      "ui_elements": [
+        {
+          "type": "list",
+          "text": "empty"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "Filter: All types",
+        "invoice"
+      ],
+      "ui_elements": [
+        {
+          "type": "chip",
+          "text": "invoice"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Search returns empty list despite matching documents"
+    }
+  ]
+}

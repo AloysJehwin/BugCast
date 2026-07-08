@@ -1,0 +1,9 @@
+{
+  "title": "Phone number field accepts invalid values without validation message",
+  "body": "## Description\nDuring a recorded session in SignupFlow, the user encountered: Phone number field accepts invalid values without validation message.\n\n## Steps to Reproduce\n1. Observe UI state: Create account\n2. Observe UI state: Continue\n3. Observe UI state: Welcome\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: Welcome.\n\n## Environment\n- App: SignupFlow\n- Platform: web\n",
+  "labels": [
+    "bug",
+    "ui"
+  ],
+  "severity": "medium"
+}

@@ -1,0 +1,9 @@
+{
+  "title": "App crashes when tapping Pay Now on checkout screen",
+  "body": "## Description\nDuring a recorded session in CartFlow, the user encountered: App crashes when tapping Pay Now on checkout screen.\n\n## Steps to Reproduce\n1. Observe UI state: Your cart\n2. Observe UI state: Processing payment\n3. Observe UI state: App closed unexpectedly\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: App closed unexpectedly.\n\n## Environment\n- App: CartFlow\n- Platform: ios\n",
+  "labels": [
+    "bug",
+    "crash"
+  ],
+  "severity": "critical"
+}

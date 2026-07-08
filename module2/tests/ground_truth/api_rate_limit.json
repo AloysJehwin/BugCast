@@ -1,0 +1,9 @@
+{
+  "title": "API key test button triggers rate limit on first click",
+  "body": "## Description\nDuring a recorded session in DevConsole, the user encountered: API key test button triggers rate limit on first click.\n\n## Steps to Reproduce\n1. Observe UI state: API Keys\n2. Observe UI state: 429 Too Many Requests\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: 429 Too Many Requests.\n\n## Environment\n- App: DevConsole\n- Platform: web\n",
+  "labels": [
+    "bug",
+    "performance"
+  ],
+  "severity": "high"
+}

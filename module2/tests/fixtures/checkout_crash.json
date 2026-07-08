@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "session_id": "checkout_crash",
+  "metadata": {
+    "app_name": "CartFlow",
+    "platform": "ios",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Your cart",
+        "Total $42.00",
+        "Pay Now"
+      ],
+      "ui_elements": [
+        {
+          "type": "button",
+          "text": "Pay Now"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "Processing payment"
+      ],
+      "ui_elements": [
+        {
+          "type": "text",
+          "text": "Processing payment"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "App closed unexpectedly"
+      ],
+      "ui_elements": [
+        {
+          "type": "alert",
+          "text": "Crash report"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "App crashes when tapping Pay Now on checkout screen"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+ollama:
+  host: http://localhost:11434
+  model: qwen2.5:7b-instruct
+  temperature: 0
+  timeout_seconds: 180
+
+pipeline:
+  enable_frame_filter: true
+  enable_lingua_compression: true
+  enable_json_mode: true
+
+frame_filter:
+  min_ocr_chars: 3
+  max_frames: 15
+  duplicate_threshold: 0.85
+  min_score: 0.1
+
+lingua:
+  target_rate: 0.25
+  model_name: microsoft/llmlingua-2-xlm-roberta-large-meetingbank
+
+drafts:
+  output_dir: drafts
+
+benchmark:
+  fixtures_dir: tests/fixtures
+  ground_truth_dir: tests/ground_truth
+  report_dir: bench_reports
+  configs:
+    - name: baseline
+      enable_frame_filter: false
+      enable_lingua_compression: false
+      enable_json_mode: false
+    - name: filter_only
+      enable_frame_filter: true
+      enable_lingua_compression: false
+      enable_json_mode: false
+    - name: lingua_only
+      enable_frame_filter: false
+      enable_lingua_compression: true
+      enable_json_mode: false
+    - name: json_mode_only
+      enable_frame_filter: false
+      enable_lingua_compression: false
+      enable_json_mode: true
+    - name: full_pipeline
+      enable_frame_filter: true
+      enable_lingua_compression: true
+      enable_json_mode: true

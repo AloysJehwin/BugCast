@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "session_id": "form_validation",
+  "metadata": {
+    "app_name": "SignupFlow",
+    "platform": "web",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Create account",
+        "Phone",
+        "abc123"
+      ],
+      "ui_elements": [
+        {
+          "type": "input",
+          "text": "Phone"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "Continue"
+      ],
+      "ui_elements": [
+        {
+          "type": "button",
+          "text": "Continue"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "Welcome"
+      ],
+      "ui_elements": [
+        {
+          "type": "text",
+          "text": "Welcome"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Phone number field accepts invalid values without validation message"
+    }
+  ]
+}

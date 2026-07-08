@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "session_id": "dark_mode_contrast",
+  "metadata": {
+    "app_name": "NotesPlus",
+    "platform": "android",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "New note",
+        "Title",
+        "Start writing..."
+      ],
+      "ui_elements": [
+        {
+          "type": "input",
+          "text": "Title"
+        },
+        {
+          "type": "textarea",
+          "text": "Start writing..."
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "Dark theme enabled"
+      ],
+      "ui_elements": [
+        {
+          "type": "toggle",
+          "text": "Dark mode"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "Start writing...",
+        "low contrast"
+      ],
+      "ui_elements": [
+        {
+          "type": "textarea",
+          "text": "Start writing..."
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Unreadable placeholder text in dark mode on new note screen"
+    }
+  ]
+}

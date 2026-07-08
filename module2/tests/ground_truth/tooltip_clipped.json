@@ -1,0 +1,10 @@
+{
+  "title": "Toolbar tooltip is clipped at viewport edge on small screens",
+  "body": "## Description\nDuring a recorded session in DesignLab, the user encountered: Toolbar tooltip is clipped at viewport edge on small screens.\n\n## Steps to Reproduce\n1. Observe UI state: Align left\n2. Observe UI state: Align left\n3. Observe UI state: ...\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: ....\n\n## Environment\n- App: DesignLab\n- Platform: web\n",
+  "labels": [
+    "bug",
+    "ui",
+    "accessibility"
+  ],
+  "severity": "low"
+}

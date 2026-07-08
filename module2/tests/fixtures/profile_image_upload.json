@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "session_id": "profile_image_upload",
+  "metadata": {
+    "app_name": "ProfileHub",
+    "platform": "web",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Edit profile",
+        "Upload photo"
+      ],
+      "ui_elements": [
+        {
+          "type": "button",
+          "text": "Upload photo"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "avatar.png",
+        "2.1 MB"
+      ],
+      "ui_elements": [
+        {
+          "type": "file",
+          "text": "avatar.png"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "Upload failed",
+        "Something went wrong"
+      ],
+      "ui_elements": [
+        {
+          "type": "dialog",
+          "text": "Upload failed"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Profile photo upload fails with generic error for PNG files"
+    }
+  ]
+}
