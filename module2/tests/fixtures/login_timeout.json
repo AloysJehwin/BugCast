@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "session_id": "login_timeout",
+  "metadata": {
+    "app_name": "ShopPortal",
+    "platform": "web",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Welcome back",
+        "Email",
+        "Password",
+        "Sign in"
+      ],
+      "ui_elements": [
+        {
+          "type": "input",
+          "text": "Email"
+        },
+        {
+          "type": "button",
+          "text": "Sign in"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "Signing in...",
+        "Please wait"
+      ],
+      "ui_elements": [
+        {
+          "type": "spinner",
+          "text": "Loading"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "Request timed out",
+        "Unable to reach server"
+      ],
+      "ui_elements": [
+        {
+          "type": "dialog",
+          "text": "Network Error"
+        },
+        {
+          "type": "button",
+          "text": "Retry"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Login request times out after submitting valid credentials"
+    }
+  ]
+}

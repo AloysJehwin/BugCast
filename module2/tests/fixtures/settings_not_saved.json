@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "session_id": "settings_not_saved",
+  "metadata": {
+    "app_name": "PrefsKit",
+    "platform": "web",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Settings",
+        "Email alerts",
+        "On"
+      ],
+      "ui_elements": [
+        {
+          "type": "toggle",
+          "text": "Email alerts"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "Saved"
+      ],
+      "ui_elements": [
+        {
+          "type": "toast",
+          "text": "Saved"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "Email alerts",
+        "Off"
+      ],
+      "ui_elements": [
+        {
+          "type": "toggle",
+          "text": "Email alerts"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Notification settings revert after page refresh"
+    }
+  ]
+}

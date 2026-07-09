@@ -1,0 +1,9 @@
+{
+  "title": "Profile photo upload fails with generic error for PNG files",
+  "body": "## Description\nDuring a recorded session in ProfileHub, the user encountered: Profile photo upload fails with generic error for PNG files.\n\n## Steps to Reproduce\n1. Observe UI state: Edit profile\n2. Observe UI state: avatar.png\n3. Observe UI state: Upload failed\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: Upload failed.\n\n## Environment\n- App: ProfileHub\n- Platform: web\n",
+  "labels": [
+    "bug",
+    "ui"
+  ],
+  "severity": "medium"
+}

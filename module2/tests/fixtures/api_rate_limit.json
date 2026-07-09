@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "session_id": "api_rate_limit",
+  "metadata": {
+    "app_name": "DevConsole",
+    "platform": "web",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 3000,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "API Keys",
+        "Test connection"
+      ],
+      "ui_elements": [
+        {
+          "type": "button",
+          "text": "Test connection"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "429 Too Many Requests"
+      ],
+      "ui_elements": [
+        {
+          "type": "alert",
+          "text": "Rate limited"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "API key test button triggers rate limit on first click"
+    }
+  ]
+}

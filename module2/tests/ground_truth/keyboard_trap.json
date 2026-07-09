@@ -1,0 +1,10 @@
+{
+  "title": "Keyboard focus trapped inside modal and cannot reach close button",
+  "body": "## Description\nDuring a recorded session in SupportDesk, the user encountered: Keyboard focus trapped inside modal and cannot reach close button.\n\n## Steps to Reproduce\n1. Observe UI state: Help\n2. Observe UI state: Support chat\n3. Observe UI state: Tab\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: Tab.\n\n## Environment\n- App: SupportDesk\n- Platform: web\n",
+  "labels": [
+    "bug",
+    "accessibility",
+    "ui"
+  ],
+  "severity": "high"
+}

@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "session_id": "video_buffering",
+  "metadata": {
+    "app_name": "StreamBox",
+    "platform": "android",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Live now",
+        "Play"
+      ],
+      "ui_elements": [
+        {
+          "type": "button",
+          "text": "Play"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "Buffering...",
+        "0:00"
+      ],
+      "ui_elements": [
+        {
+          "type": "spinner",
+          "text": "Buffering"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "Playback error",
+        "Try again"
+      ],
+      "ui_elements": [
+        {
+          "type": "dialog",
+          "text": "Playback error"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Live stream stalls indefinitely on mobile data"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Meetings shift by one hour after daylight saving change",
+  "body": "## Description\nDuring a recorded session in ScheduleIt, the user encountered: Meetings shift by one hour after daylight saving change.\n\n## Steps to Reproduce\n1. Observe UI state: Team sync\n2. Observe UI state: Timezone: America/Los_Angeles\n3. Observe UI state: Team sync\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: Team sync.\n\n## Environment\n- App: ScheduleIt\n- Platform: web\n",
+  "labels": [
+    "bug",
+    "regression"
+  ],
+  "severity": "high"
+}

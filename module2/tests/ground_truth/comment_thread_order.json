@@ -1,0 +1,9 @@
+{
+  "title": "Comment thread displays replies in reverse chronological order",
+  "body": "## Description\nDuring a recorded session in ReviewBoard, the user encountered: Comment thread displays replies in reverse chronological order.\n\n## Steps to Reproduce\n1. Observe UI state: Comments\n2. Observe UI state: Alice\n3. Observe UI state: Carol\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: Carol.\n\n## Environment\n- App: ReviewBoard\n- Platform: web\n",
+  "labels": [
+    "bug",
+    "ui"
+  ],
+  "severity": "low"
+}

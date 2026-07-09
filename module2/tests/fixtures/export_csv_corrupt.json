@@ -1,0 +1,63 @@
+{
+  "version": "1.0",
+  "session_id": "export_csv_corrupt",
+  "metadata": {
+    "app_name": "DataDesk",
+    "platform": "desktop",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Reports",
+        "Export CSV"
+      ],
+      "ui_elements": [
+        {
+          "type": "button",
+          "text": "Export CSV"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "Export complete",
+        "report_march.csv"
+      ],
+      "ui_elements": [
+        {
+          "type": "toast",
+          "text": "Export complete"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "\u00c3\u00a9",
+        "garbled",
+        "encoding error"
+      ],
+      "ui_elements": [
+        {
+          "type": "preview",
+          "text": "CSV preview"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Exported CSV file opens with garbled characters"
+    }
+  ]
+}

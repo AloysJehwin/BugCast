@@ -1,0 +1,9 @@
+{
+  "title": "Notification settings revert after page refresh",
+  "body": "## Description\nDuring a recorded session in PrefsKit, the user encountered: Notification settings revert after page refresh.\n\n## Steps to Reproduce\n1. Observe UI state: Settings\n2. Observe UI state: Saved\n3. Observe UI state: Email alerts\n\n## Expected Behavior\nThe application should complete the user flow without errors.\n\n## Actual Behavior\nThe session shows failure indicators including: Email alerts.\n\n## Environment\n- App: PrefsKit\n- Platform: web\n",
+  "labels": [
+    "bug",
+    "regression"
+  ],
+  "severity": "medium"
+}

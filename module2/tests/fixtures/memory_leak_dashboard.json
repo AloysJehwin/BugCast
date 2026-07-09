@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "session_id": "memory_leak_dashboard",
+  "metadata": {
+    "app_name": "OpsPanel",
+    "platform": "desktop",
+    "recorded_at": "2026-03-01T12:00:00Z",
+    "duration_ms": 4500,
+    "reporter": "qa@example.com"
+  },
+  "frames": [
+    {
+      "frame_id": "f000",
+      "timestamp_ms": 1500,
+      "ocr_text": [
+        "Dashboard",
+        "CPU 12%",
+        "Memory 1.2 GB"
+      ],
+      "ui_elements": [
+        {
+          "type": "chart",
+          "text": "Memory"
+        }
+      ]
+    },
+    {
+      "frame_id": "f001",
+      "timestamp_ms": 3000,
+      "ocr_text": [
+        "Memory 2.8 GB"
+      ],
+      "ui_elements": [
+        {
+          "type": "chart",
+          "text": "Memory"
+        }
+      ]
+    },
+    {
+      "frame_id": "f002",
+      "timestamp_ms": 4500,
+      "ocr_text": [
+        "Memory 4.5 GB",
+        "Warning"
+      ],
+      "ui_elements": [
+        {
+          "type": "alert",
+          "text": "High memory usage"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "interaction",
+      "timestamp_ms": 1000,
+      "target": "Dashboard memory usage grows continuously while idle"
+    }
+  ]
+}
